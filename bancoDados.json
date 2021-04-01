@@ -1,0 +1,58 @@
+{
+    "pets": [
+      {
+        "nome": "Sansão",
+        "tipo": "cachorro",
+        "idade": 8,
+        "raca": "schnauzer",
+        "tutor": "Lud",
+        "contato": "(81) 99999-0000",
+        "vacinado": true,
+        "servicos": [
+          "banho",
+          "tosa",
+          "vacina",
+          "hotelzinho"
+        ]
+      },
+      {
+        "nome": "Biscoita",
+        "tipo": "gato",
+        "idade": 2,
+        "raca": "SDR",
+        "tutor": "Bruno",
+        "contato": "(81) 92222-8888",
+        "vacinado": true,
+        "servicos": [
+          "banho",
+          "unhas aparadas"
+        ]
+      },
+      {
+        "nome": "Dalila",
+        "tipo": "cachorro",
+        "idade": 5,
+        "raca": "pastor-alemão",
+        "tutor": "Pedro",
+        "contato": "(81) 91111-5555",
+        "vacinado": true,
+        "servicos": [
+          "banho",
+          "vacina"
+        ]
+      },
+      {
+        "nome": "Blanco",
+        "tipo": "cachorro",
+        "idade": 2,
+        "raca": "maltes",
+        "tutor": "Levita",
+        "contato": "(81) 91111-5533",
+        "vacinado": true,
+        "servicos": [
+          "banho",
+          "vacina"
+        ]
+      }    
+    ]
+  }
