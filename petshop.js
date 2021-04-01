@@ -12,14 +12,15 @@ const petshop = {
         fs.writeFileSync('bancoDados.json', petsAtualizado, 'utf-8');
     },
     listarPets: () => {
-
+        let textoListarPets = "PETSHOP \n"
         bancoDados.pets.forEach((pet) => {
     
-            console.log(`${pet.nome}, ${pet.idade} anos, ${pet.tipo}, ${pet.raca}, ${(pet.vacinado) ? 'vacinado': 'não vacinado'}`);
+            textoListarPets += (`${pet.nome}, ${pet.idade} anos, ${pet.tipo}, ${pet.raca}, ${(pet.vacinado) ? 'vacinado': 'não vacinado'}`);
             pet.servicos.forEach((servico) => {
-                console.log(`${servico.data} - ${servico.nome}`);
-            })
+                textoListarPets += (`${servico.data} - ${servico.nome}`);
+            });           
         })
+        return textoListarPets;
     },
     vacinarPet: pet => {
         if (!pet.vacinado) {
@@ -45,18 +46,14 @@ const petshop = {
             return pet;
         });
     
-        // atualizarBanco();
+        //atualizarBanco();
         console.log(`${petVacinadosCampanha} pets foram vaciados nessa campanha!`);
     },
-    adicionarPet: (...novosPets) => {
-        novosPets.forEach((novoPet) => {
-            bancoDados.pets.push(novoPet);
-        })
-    
-        atualizarBanco();
-        novosPets.forEach((pet) => {
-            console.log(`${pet.nome} foi adicionado com sucesso!`);
-        })
+    adicionarPet: (novosPet) =>{         
+        bancoDados.pets.push(novosPet);
+        petshop.atualizarBanco();
+        console.log(`${novosPet.nome} foi adicionado com sucesso!`)
+
     },
     darBanhoPet: pet => {
         pet.servicos.push({
